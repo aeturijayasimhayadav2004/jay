@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char s1[20]="jayasimha";
+	char s2[20]="jayasimha.com";
+	if (strcmp(s1,s2)==0)
+	{
+		printf("both strings are equal");
+	}
+	else
+	{
+		printf("both strigs are not equal");
+	}
+	return 0;
+}
