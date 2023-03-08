@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	 long number, firstDigit, lastDigit, sum;
+	 clrscr();
+	 printf("Enter any number: ");
+	 scanf("%ld", &number);
+	
+	 /* Finding last digit */
+	 lastDigit = number%10;
+	
+	 /* Finding first digit */
+	 while(number>9)
+	 {
+	  	number = number/10;
+	 }
+	 firstDigit = number;
+	
+	 /* Finding sum */
+	 sum = firstDigit + lastDigit;
+	
+	 /* Displaying result */
+	 printf("Sum of first digit and last digit is: %ld", sum);
+	
+	 getch();
+	 return(0);
+}
