@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	 long int number, digitCount=0, numberCopy;
+	 clrscr();
+	 printf("Enter Number: ");
+	 scanf("%ld", &number);
+	
+	 numberCopy = number;
+	
+	 while(number!=0)
+	 {
+		  digitCount++;
+		  number = number/10;
+	 }
+	 printf("%ld has %ld digits.", numberCopy, digitCount);
+	
+	 getch();
+	 return(0);
+}
