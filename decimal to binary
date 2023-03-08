@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	 long int decimal, binary=0, rem, num, base=1;
+	 clrscr();
+	 printf("Enter decimal number: ");
+	 scanf("%ld", &decimal);
+	 num = decimal;
+	 
+	 while(num !=0 )
+	 {
+	  rem = num%2;
+	  binary = binary + base * rem;
+	  base = base*10;
+	  num = num/2;
+	 }
+	 
+	 printf("Decimal (%ld) = Binary (%ld)", decimal, binary);
+	 getch();
+	 return(0);
+}
