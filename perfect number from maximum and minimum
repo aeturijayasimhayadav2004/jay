@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	 int minimum, maximum, sum, i, j;
+	 clrscr();
+	 printf("Enter minimum: ");
+	 scanf("%d", &minimum);
+	 printf("%Enter maximum: ");
+	 scanf("%d", &maximum);
+	
+	 /* Generating Perfect Numbers */
+	 for(i=minimum; i<=maximum; i++)
+	 {
+	
+		  /* Finding Sum of All Divisors */
+		  sum = 0;
+		  for(j=1;j< i;j++)
+		  {
+			   if(i%j==0)
+			   {
+			    	sum = sum + j;
+			   }
+		  }
+		
+		  /* Making Decision and Printing */
+		  if(sum == i)
+		  {
+		   	printf("%d\t", i);
+		  }
+	 }
+	 getch();
+	 return(0);
+}
