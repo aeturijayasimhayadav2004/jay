@@ -1,0 +1,42 @@
+#include<stdio.h>
+/* FUNCTION PROTOTYPES */
+void getPrimeFactors();
+/* MAIN FUNCTION*/
+int main()
+{
+ int number;
+ printf("Enter number: ");
+ scanf("%d", &number);
+ /* FUNCTION CALL */
+ getPrimeFactors(number);
+ return 0;
+}
+
+/* FUNCTION DEFINITION */
+void getPrimeFactors(int n)
+{
+    int i = 2, p[100], index=0;
+    while(i*i <= n)
+    {
+        if(n%i==0)
+        {
+            p[index] = i;
+            index++;
+            n = n/i;
+        }
+        else
+        {
+            i = i+1;
+        }
+    }
+    if(n>1)
+    {
+        p[index] = n;
+    }
+    /* Displaying results */
+    printf("Prime factors are:\n");
+    for(i=0;i<=index;i++)
+    {
+        printf("%d\t", p[i]);
+    }
+}
