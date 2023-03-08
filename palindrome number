@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+	 long int number, reverse=0, rem, original;
+	 clrscr();
+	 printf("Enter number: ");
+	 scanf("%ld", &number);
+	
+	 original = number;
+	 
+	 // Finding Reverse
+	 while(number!=0)
+	 {
+	  rem = number % 10;
+	  reverse = reverse*10 + rem;
+	  number = number/10;
+	 }
+	 
+	 // Checking for Palindrome
+	 if(original == reverse)
+	 {
+	  printf("%ld is PALINDROME.", original);
+	 }
+	 else
+	 {
+	  printf("%ld is NOT PALINDROME.", original);
+	 }
+	 
+	 getch();
+	 return(0);
+}
